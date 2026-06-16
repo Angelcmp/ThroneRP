@@ -48,8 +48,14 @@ export default function HomePage() {
           style={{ animationDelay: "0.2s" }}
         >
           <Link
-            href="/auth/signup"
+            href="/play/demo-campaign-1"
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-8 py-3.5 text-base font-semibold text-bg-deep hover:bg-gold-hover transition-colors"
+          >
+            Ver demo →
+          </Link>
+          <Link
+            href="/auth/signup"
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-bg-elevated px-8 py-3.5 text-base font-semibold text-text-primary hover:border-gold/50 transition-colors"
           >
             Crear cuenta gratis
           </Link>

@@ -7,14 +7,14 @@ import { Badge } from "@/components/ui/badge";
 // Datos de demo hasta que conectemos al backend
 const demoCampaigns = [
   {
-    id: "1",
+    id: "demo-campaign-1",
     title: "La sombra del dragon",
     world: "Reinos Olvidados",
     turns: 42,
     players: 3,
   },
   {
-    id: "2",
+    id: "demo-campaign-2",
     title: "Ciberpunk: Distrito 9",
     world: "Neon City",
     turns: 18,
@@ -41,12 +41,9 @@ export default function DashboardPage() {
           <h2 className="font-[family-name:var(--font-cinzel)] text-xl font-semibold">
             Tus campanas
           </h2>
-          <Link
-            href="/campaigns/new"
-            className="text-sm text-gold hover:underline"
-          >
+          <span className="text-sm text-text-muted cursor-default">
             + Nueva campana
-          </Link>
+          </span>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {demoCampaigns.map((c) => (
@@ -70,12 +67,10 @@ export default function DashboardPage() {
               </Card>
             </Link>
           ))}
-          <Link href="/campaigns/new">
-            <Card className="flex h-full min-h-[120px] flex-col items-center justify-center border-dashed border-2 border-border hover:border-gold/40 transition-colors cursor-pointer">
-              <span className="text-2xl text-text-muted mb-2">+</span>
-              <span className="text-sm text-text-secondary">Nueva campana</span>
-            </Card>
-          </Link>
+          <Card className="flex h-full min-h-[120px] flex-col items-center justify-center border-dashed border-2 border-border">
+            <span className="text-2xl text-text-muted mb-2">+</span>
+            <span className="text-sm text-text-secondary">Nueva campana</span>
+          </Card>
         </div>
       </section>
 
@@ -94,7 +89,7 @@ export default function DashboardPage() {
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {demoCharacters.map((ch) => (
-            <Link key={ch.id} href={`/characters/${ch.id}`}>
+            <Link key={ch.id} href={`/characters`}>
               <Card className="hover:border-gold/40 transition-colors cursor-pointer group">
                 <h3 className="font-semibold text-text-primary group-hover:text-gold transition-colors">
                   {ch.name}
@@ -134,7 +129,7 @@ export default function DashboardPage() {
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {demoWorlds.map((w) => (
-            <Link key={w.id} href={`/worlds/${w.id}`}>
+            <Link key={w.id} href={`/worlds`}>
               <Card className="hover:border-gold/40 transition-colors cursor-pointer group">
                 <h3 className="font-semibold text-text-primary group-hover:text-gold transition-colors">
                   {w.name}

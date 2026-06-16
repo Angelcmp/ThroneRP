@@ -63,10 +63,10 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </h1>
           <div className="flex items-center gap-4">
             <Link
-              href="/play"
+              href="/play/demo-campaign-1"
               className="rounded-lg bg-gold px-4 py-2 text-sm font-semibold text-bg-deep hover:bg-gold-hover transition-colors"
             >
-              Jugar
+              Jugar demo
             </Link>
           </div>
         </header>
