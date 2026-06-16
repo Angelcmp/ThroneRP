@@ -3,6 +3,10 @@
 import { useState, useRef, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { Card } from "@/components/ui/card";
+
+export function generateStaticParams() {
+  return [{ id: "demo-campaign-1" }, { id: "demo-campaign-2" }];
+}
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";
